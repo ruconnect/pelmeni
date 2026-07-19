@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пельмени от Шлёпы — Премиум Качество</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-flex">
+            <div class="logo">Пельмени от Шлёпы 🐾</div>
+            <nav>
+                <a href="#catalog">Каталог</a>
+                <a href="#about">О нас</a>
+                <a href="#reviews">Отзывы</a>
+            </nav>
+            <div class="cart-btn" onclick="toggleCart()">🛒 Корзина (<span id="cart-count">0</span>)</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-flex">
+            <div class="hero-text">
+                <h1>Легендарные пельмени ручной лепки</h1>
+                <p>Секретный рецепт Большого Шлёпы. Натуральное мясо, тонкое тесто и много любви в каждом пельмешке.</p>
+                <a href="#catalog" class="btn">Купить сейчас</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVCducp5vW3U_KTHJRmWEs54sF8Poxz6fMImdmo3vLli8h-yk3SH_9To8t&s=10" alt="Шлёпа одобряет">
+            </div>
+        </div>
+    </section>
+
+    <section id="catalog" class="catalog">
+        <div class="container">
+            <h2>Наш Ассортимент</h2>
+            <div class="grid">
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP6bZFMwx5dhiF9COqzOXe1MNd8lZlvEFLpiJGHd4IwLe3nE2ipb8HAbQ&s=10" alt="Пельмени">
+                    <h3>Пельмени "Классические" от Шлёпы</h3>
+                    <p>Свинина и говядина. Любимый выбор Большого Шлёпы.</p>
+                    <div class="price">450 ₽ / кг</div>
+                    <button class="btn" onclick="addToCart('Пельмени Классические', 450)">В корзину</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP6bZFMwx5dhiF9COqzOXe1MNd8lZlvEFLpiJGHd4IwLe3nE2ipb8HAbQ&s=10" alt="Пельмени">
+                    <h3>Пельмени "Фирменные" с мяткой</h3>
+                    <p>Отборное мясо со специями по секретному рецепту.</p>
+                    <div class="price">550 ₽ / кг</div>
+                    <button class="btn" onclick="addToCart('Пельмени Фирменные', 550)">В корзину</button>
+                </div>
+                <div class="product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP6bZFMwx5dhiF9COqzOXe1MNd8lZlvEFLpiJGHd4IwLe3nE2ipb8HAbQ&s=10" alt="Пельмени">
+                    <h3>Пельмени "Гигантские" (XL)</h3>
+                    <p>Для самых голодных. Насыщенный бульон внутри.</p>
+                    <div class="price">600 ₽ / кг</div>
+                    <button class="btn" onclick="addToCart('Пельмени Гигантские', 600)">В корзину</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>О нашем производстве</h2>
+            <p>Мы используем только фермерские продукты. Каждая партия проходит строгий контроль качества лично главным шеф-поваром — котом Шлёпой. Никаких соевых добавок, только чистый вкус традиций.</p>
+        </div>
+    </section>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="toggleCart()">&times;</span>
+            <h2>Ваша корзина</h2>
+            <div id="cart-items"></div>
+            <div class="total">Итого: <span id="cart-total">0</span> ₽</div>
+            <button class="btn checkout-btn" onclick="checkout()">Оформить заказ</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Пельменная Большого Шлёпы. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
