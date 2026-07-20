@@ -74,7 +74,8 @@
             <span class="close" onclick="toggleCart()">&times;</span>
             <h2>Ваша корзина</h2>
             <div id="cart-items"></div>
-            <input type="number">
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 999-99-99" required>
             <div class="total">Итого: <span id="cart-total">0</span> ₽</div>
             <button class="btn checkout-btn" onclick="checkout()">Оформить заказ</button>
         </div>
